@@ -28,7 +28,7 @@ contract FundMeTest is StdCheats, Test {
         vm.deal(USER, STARTING_USER_BALANCE);
     }
 
-    function testPriceFeedSetCorrectly() public {
+    function testPriceFeedSetCorrectly() public view {
         address retreivedPriceFeed = address(fundMe.getPriceFeed());
         // (address expectedPriceFeed) = helperConfig.activeNetworkConfig();
         address expectedPriceFeed = helperConfig.activeNetworkConfig();
